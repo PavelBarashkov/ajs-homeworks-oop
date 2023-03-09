@@ -1,5 +1,5 @@
 export default class Character {
-  constructor(name, type) {
+  constructor(name, type, level = 1, health = 100) {
     if (name.length <= 2 || name.length >= 10 || typeof name !== 'string') {
       throw new Error('Некорректный тип');
     }
@@ -10,8 +10,8 @@ export default class Character {
     }
     this.name = name;
     this.type = type;
-    this.level = 1;
-    this.health = 100;
+    this.level = level;
+    this.health = health;
     this.attack = undefined;
     this.defence = undefined;
   }
